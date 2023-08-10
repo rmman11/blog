@@ -1,0 +1,30 @@
+https://blog.logrocket.com/exploring-best-laravel-chart-libraries/ --graphics in projects
+
+php artisan db:seed --class=UserSeeder -->insert in db example
+d:\xampp\htdocs\blog(2023-project-backend).rar
+https://www.youtube.com/watch?v=Eijm4xlMIL0
+
+
+php artisan view:clear
+php artisan cache:clear
+
+
+
+   php artisan db:seed --class=PostsSeeder example ->popularea bazei de date cu nume fictive
+
+
+
+   create status :daca este activ sau inactiv
+
+
+   
+
+php artisan make:migration create_posts_table  ->create table in migration laravel
+https://marketplace.visualstudio.com/items?itemName=Blackboxapp.blackbox
+
+
+view -in photo cu imagine
+
+php artisan make:model Category -m
+
+php artisan make:migration add_category_id_to_posts --table=posts
