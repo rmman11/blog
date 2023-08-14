@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 
 
 use App\Models\User;
+use App\Models\Product;
 use App\Models\AdminUser;
 use LaravelDaily\LaravelCharts\Classes\LaravelChart;
 use App\Charts\ExpensesChart;
@@ -32,6 +33,7 @@ class DashboardController extends Controller
     public function dashboard(ExpensesChart $chart) {
  
         $user = new User();
+        $product =new Product();
    
 
         $chart_options = [
@@ -44,8 +46,23 @@ class DashboardController extends Controller
         ];
         $chart1 = new LaravelChart($chart_options);
 
+   $chart_product  = [
+
+
+       'chart_title' => 'Product by  months',
+            'report_type' => 'group_by_date',
+            'model' => 'App\Models\Product',
+            'group_by_field' => 'created_at',
+            'group_by_period' => 'month',
+            'chart_type' => 'bar',
+
+       ]
+
+
+        $prod_chart = new LaravelChart($chart_product);
+
  
-	 return view('admin.dashboard',compact('user','chart1'),['chart' => $chart->build()]);
+	 return view('admin.dashboard',compact('user','chart1','prod_chart'),['chart' => $chart->build()]);
  
     }
 
